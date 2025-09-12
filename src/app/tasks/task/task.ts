@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Task } from './task.model';
 
 @Component({
   selector: 'app-task',
@@ -6,6 +7,6 @@ import { Component, Input } from '@angular/core';
   templateUrl: './task.html',
   styleUrl: './task.css'
 })
-export class Task {
-  @Input({ required: true}) task!: { id: string; title: string; summary: string; userId: string; dueDate: string; };
+export class TaskComponent {
+  @Input({ required: true}) task!: Task;
 }

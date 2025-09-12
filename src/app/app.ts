@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, Output } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from "./header/header";
 import { Users } from "./users/users";
@@ -14,7 +14,7 @@ import { Tasks } from "./tasks/tasks";
 export class App {
   protected readonly title = signal('demo01');
 
-  selectedUserId: string = "";
+  @Output() selectedUserId: string = "";
 
   onSelectUser (id: string) {
     this.selectedUserId = id;
